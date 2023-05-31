@@ -1,0 +1,10 @@
+[Desktop Entry]
+Version=1.0
+Name=Blackout
+Comment=Start the blackout app
+Exec=sh -c "lxterminal -e ~/blackout/start.sh"
+Icon=utilities-terminal
+Terminal=false
+Type=Application
+Categories=Application;
+X-KeepTerminal=true
