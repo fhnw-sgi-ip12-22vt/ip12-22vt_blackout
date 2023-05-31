@@ -1,0 +1,50 @@
+/* CSS for ConfigView */
+
+.title-label {
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #333333;
+}
+
+.config-label {
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #333333;
+}
+
+.config-text-area {
+    -fx-font-size: 14px;
+    -fx-prompt-text-fill: gray;
+    -fx-background-color: #f5f5f5;
+    -fx-text-fill: #333333;
+    -fx-prompt-text-fill: #aaaaaa;
+    -fx-focus-color: #0066cc;
+}
+
+.config-button {
+    -fx-font-size: 14px;
+    -fx-background-color: #0066cc;
+    -fx-text-fill: white;
+    -fx-pref-width: 250px;
+    -fx-pref-height: 30px;
+}
+
+.return-hint {
+    -fx-font-size: 12px;
+    -fx-text-fill: #666666;
+}
+
+.test-label {
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #333333;
+}
+
+.test-text-area {
+    -fx-font-size: 14px;
+    -fx-prompt-text-fill: gray;
+    -fx-background-color: #f5f5f5;
+    -fx-text-fill: #333333;
+    -fx-prompt-text-fill: #aaaaaa;
+    -fx-focus-color: #0066cc;
+}
