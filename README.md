@@ -1,7 +1,7 @@
 # ip12-22vt_blackout
 FHNW Computer Science Student Project Semester 1&2
 
-IN BEARBEITUNG!
+Doku's IN BEARBEITUNG!
 
 ## Spielbeschreibung
 
@@ -14,6 +14,8 @@ Daraus berechenbare Statistiken werden der Primeo Energie AG über ein simples, 
 Die Hardwarekomponenten sind im SAD unter [Hardwarebeschreibung](https://gitlab.fhnw.ch/ip12-22vt/ip12-22vt_wechselspiel/docu/-/blob/main/02_hardware/hardware.adoc)  dokumentiert.
 
 ## Betriebsanleitung
+
+Die Betriebsanleitung ist in der Dokumentation unter [Betriebsanleitung](https://github.com/fhnw-sgi-ip12-22vt/ip12-22vt_blackout/blob/main/docu/Betriebsanleitung.pdf) dokumentiert.
 
 
 
