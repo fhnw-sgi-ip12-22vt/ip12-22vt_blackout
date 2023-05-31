@@ -1,0 +1,66 @@
+[[section-system-scope-and-context]]
+== Kontextabgrenzung
+In der Kontextabgrenzung werden die Grenzen zu potenziellen Nachbarsysteme oder Benutzer angeschaut.
+Dabei werden externe Schnittstellen aufgezeigt und die Verantwortlichkeit von Blackout bzw. dessen Scope genau definiert.
+
+=== Fachlicher Kontext
+Beim fachlichen Kontext werden die alle Kommunikationsbeziehungen mit dem System festgelegt. Sowie die Ein- und
+Ausgabedaten oder Schnittellen erklärt. Blackout interagiert nicht mit externen Schnittstellen, sondern nur
+mit menschlichen Benutzer.
+
+.System-Kontextdiagramm
+image::../00_diagrams/system_context_diagram.png[System Context Diagramm]
+
+=== Spieler (Benutzer)
+Blackout kann als alleine oder zu zweit gespielt werden.
+Diese Spieler interagieren als Einzige mit dem System Blackout.
+
+=== Ein- und Ausgabearten von Blackout
+.Ein- und Ausgabearten von Blackout
+[cols="1, 2, 2"]
+|===
+|Kommunikationsart |Eingabe |Ausgabe
+|Environment Geräusche (Spiel) |Zustandswechsel |Ton und Visuelle Darstellung
+|Context Geräusche (Spiel) | Zustandswechsel |Ton und Visuelle Darstellung
+|Blackout-Frage |Buttoneingabe |Ton und Visuelle Darstellung
+|Buttonzustand |- |Visuelle Darstellung
+|Bild |- |Visuelle Darstellung
+|===
+
+=== Technischer Kontext
+Technische Schnittstellen zwischen Blackout und seiner Umwelt werden im technischen Kontext angeschaut.
+Zusätzlich werden die technischen Schnittstellen gemappt auf die fachlichen Schnittstellen und deren technischen
+Spezifikationen angeschaut.
+
+*Systemidee*
+
+Das Spiel Blackout soll auf einem Raspberry Pi laufen und auf einem, bzw. zwei Displays angezeigt werden (abhängig von der Anzahl Spieler*innen). Gesteuert wird es über 4 Hardware-Buttons. Damit sollen die Spieler*innen den Spielmodus auswählen sowie die Fragen beantworten. Die Audioausgabe soll für den Mehrspielermodus via Lautsprecher und Kopfhörer und für den Einzelmodus nur über Kopfhörer erfolgen. Am Schluss soll ein QR-Code angezeigt werden, der von den Spieler*innen gescannt werden kann. Damit erhalten sie die erreichte Punktzahl auch auf ihrem Handy.
+
+.Deployment Diagramm
+image::../00_diagrams/deployment_diagram.png[Deployment Diagramm]
+
+.Technische Schnittstellen
+[cols="1, 2, 1"]
+|===
+|Schnittstelle |Beschreibung |Mapping
+
+|Raspberry PI
+|"Blackout" läuft auf einem Raspberry Pi, einer Einplatinen-Computereinheit. Der Raspberry Pi dient als Hardwareplattform, auf der die Java-Software des Spiels ausgeführt wird.
+|Ton und Visuelle Darstellung
+
+|Displays
+|Das Spiel wird auf ein oder zwei Displays angezeigt, je nachdem, ob es von einer einzelnen Person oder von zwei Spielern gespielt wird. Die Displays können über HDMI an den Raspberry Pi angeschlossen werden und zeigen die Fragen, Antwortmöglichkeiten und andere Spielinformationen an.
+|Visuelle Darstellung
+
+|Lautsprecher
+|Jedes Display verfügt über einen Lautsprecher, über den Sounds während des Spiels abgespielt werden können. Dies ermöglicht beispielsweise das Abspielen von Hintergrundmusik, Soundeffekten oder der Stimme von "Kulana" für zusätzliche Immersion.
+|Ton
+
+|Hardware-Buttons
+|"Blackout" wird über Hardware-Buttons gesteuert. Es gibt insgesamt 5 Hardware-Buttons auf jeder Seite, die von den Spielern verwendet werden, um die Antworten auszuwählen oder andere Aktionen im Spiel auszuführen.
+|Ton und Visuelle Darstellung
+
+|Webseiten-Auswertung
+|Am Ende jeder Quizrunde wird den Spielern ein QR-Code angezeigt. Über diesen Code gelangen sie auf eine Webseite, auf der eine detaillierte Auswertung der Quizrunde angezeigt wird. Die Kommunikation zwischen dem Spiel und der Webseite erfolgt über das Internet oder eine lokale Netzwerkverbindung.
+|Visuelle Darstellung
+|===

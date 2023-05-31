@@ -1,0 +1,15 @@
+=== ${TEST_NAME}
+
+[%autowidth]
+|===
+|*Beschreibung*
+|
+|*Vorbedingung*
+|
+|*Testdaten*
+|
+|*Schritte*
+|
+|*Ergebnis*
+|
+|===

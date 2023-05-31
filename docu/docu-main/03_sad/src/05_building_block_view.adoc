@@ -1,0 +1,83 @@
+[[section-building-block-view]]
+== Bausteinsicht Level 1
+Die Bausteinsicht listet die Bausteine des Systems auf und zeigt deren Abhängigkeiten auf.
+
+.Bausteinsicht Level 1 als Klassendiagramm
+image:../00_diagrams/building_block_level_1.png[Bausteinsicht Level 1]
+
+=== Whitebox Gesamtsystem
+In diesem Abschnitt wird die grobe Zerlegung des Gesamtsystems genauer betrachtet und die einzelnen Ebenen sowie die dazugehörige Whiteboxen angeschaut.
+
+Begründung::
+Das System Blackout ist nach der MVC Architektur aufgebaut, diese Architektur definiert somit die Struktur der Software.
+
+.Bausteine
+[cols="1,2" options="header"]
+|===
+| **Subsystem** | **Kurzbeschreibung**
+|AppStarter |Die Main-Klasse der Applikation.
+|controller |Enthält alle Controller für die Applikation
+|model |Enthält alle Modelle der Applikation
+|view |Enthält alle GUI und PUI der Applikation
+|component |Enthält alle Komponenten die eine Hardware-Komponenten repräsentieren.
+|util |Enthält alle Hilfsklassen der Applikation
+|===
+
+== Bausteinsicht Level 2
+
+.Bausteinsicht Level 2 als Klassendiagramm
+image:../00_diagrams/building_block_level_2.png[Klassendiagramm Ebene 2]
+
+Begründung::
+Hier wird die zerlegung des Systems detaillierte angeschaut. Sowie die wichtigsten Systeme dokumentiert. Zuvor erklärte Bausteine werden nicht mehr nochmals erwähnt.
+
+.Bausteine
+[cols="1,2" options="header"]
+|===
+| **Subsystem** | **Kurzbeschreibung**
+|LEDButton |Der Komponent welcher der physische LedButton repräsentiert
+|PIN |Hilfsklasse für die PIN Nummerierung des Raspberry Pi
+|state |Hier sind alle StateController versorgt
+|AppController |Der AppController ist der Hauptcontroller der Application
+|SystemCheck |Die SystemCheck Klasse ist für den SystemCheck der Buttons zuständig
+|StateMachine |Das Interface StateMachine dient den StateController dazu ihren State zu wechseln.
+|image |Hier ist die Hilfsklasse für das Laden von Bildern versorgt
+|mvcbase |Hier sind die Basisklassen und Interfaces für die MVC-Architektur abgelegt
+|sound |Hier sind die Hilfsklassen für das Abspielen von Sound versorgt
+|update |Hier ist die Hilfsklasse für das Aktualisieren der Quizfragen versorgt
+|audio |Hier sind ist die AudioEngine versorgt
+|qrcode |Hier ist die Hilfsklasse für das Erstellen von QR-Codes versorgt
+|config |Hier ist die Hilfsklasse für das Laden der Config versorgt
+|quiz |Hier ist die Logik für das Quiz versorgt
+|dialog |Hier ist die Logik des Dialog-Hilfsklasse versorgt
+|exception |Eigene Exceptions der Applikation
+|pi4j |Hilfsklasse für die Pi4j Library
+|gui |Alle GUIs
+|pui |Das PUI der Applikation
+|===
+
+=== MVC
+Die Applikation implementiert die MVC Architektur, daher gibt es Klassen für den Controller, View, und Model.
+Da Blackout eine Statemachine implementiert (Siehe: Kapitel 8 Konzepte) gibt es für einzelnen States auch Klassen für Controller, View und Model.
+
+.MVC Architektur als Klassendiagramm
+image:../00_diagrams/mvc_class_diagram.png[MVC Klassendiagramm]
+
+=== Audio
+Für die Applikation implementierten wir eine eigene Audio-Engine  (Siehe: Kapitel 8 Konzepte).
+
+.Audio Architektur als Klassendiagramm
+image:../00_diagrams/audio_class_diagram.png[Audio Klassendiagramm]
+
+.Bausteine Audio
+[cols="1,2" options="header"]
+|===
+| **Klasse** | **Kurzbeschreibung**
+|Sound |Repräsentiert alle Sound die gespielt werden können.
+|SoundFx |Managerklasse für die SoundStages
+|SoundStage |Klasse für das Verwalten des Audios auf einer Konsole
+|AudioConfig |Config für das Erstellen eines AudioPlayers
+|AudioProcessor |Klasse für das Mixen, Konvertieren und Schreiben von Audio
+|AudioPlayer |Klasse für das Spielen des Audios auf einer Konsole
+|AudioOutput |Klasse für einen Audioausgang
+|===

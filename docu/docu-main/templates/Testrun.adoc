@@ -1,0 +1,20 @@
+== Testdurchlauf vom Test: ${TEST_NAME}
+
+[%autowidth]
+|===
+|*Datum* | ${DAY}.${MONTH}.${YEAR}
+|*Verantwortlich* | Andri Pieren
+|===
+
+include::../04_testing/00_test_case/${FILE_NAME}.adoc[Testbeschreibung]
+
+// TODO Status anpassen
+=== Status -> Test has ❌/✅
+
+Die Bestimmung des Bestanden / Nicht Bestanden-Status hängt davon ab, wie das erwartete Ergebnis und +
+das tatsächliche Ergebnis miteinander verglichen werden.
+
+*Gleiches Ergebnis* = Bestanden/Pass -> ✅
+*Unterschiedliche Ergebnisse* = Fehlschlagen/Fail -> ❌
+
+=== Eventuelle Bemerkungen

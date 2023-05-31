@@ -1,0 +1,37 @@
+[[section-runtime-view]]
+== Laufzeitsicht
+In der Laufzeitsicht werden die konkreten Abläufe und deren Beziehungen zwischen den Bausteinen betrachtet.
+
+=== Einfacher Spielablauf
+Der einfache Spielablauf zeigt der Ablauf eines Spieles.
+
+.Sequenzdiagramm einfacher Spielablauf
+image:../00_diagrams/sequence_diagram.png[Sequenzdiagramm einfacher Spielablauf]
+
+==== Beschreibung
+* "Spieler 1" drückt Knopf in "Idle 1"
+* "Idle 1" wechselt zu "Variants 1"
+* "Spieler 2" drückt Knopf in "Idle 2"
+* "Idle 2" wechselt zu "Variants 2"
+* "Spieler 1" wählt Modus "Team"
+* "Spieler 2" wählt Modus "Team"
+* "Main" lädt Fragen "Main"
+* "Spieler 1" sieht Fragen "Question 1"
+* "Spieler 2" sieht Antworten "Answer 1"
+* "Spieler 2" beantwortet Frager "Answer 1"
+* "Spieler 1" sieht Resultat "Result 1"
+* "Spieler 2" sieht Resultat "Result 2"
+* "Spieler 2" beantwortet letzte Frage "Answer 1"
+* "Spieler 1" sieht Endscreen "End 1"
+* "Spieler 2" sieht Endscreen "End 2"
+
+=== Audio Verwendung
+Hier wird die Laufzeitansicht beim Verwenden des Audios aufgezeigt.
+
+.Sequenzdiagramm Audio Verwendung
+image:../00_diagrams/sound usage.png[Sequenzdiagramm Audio Verwendung]
+
+==== Beschreibung
+* Zuerst werden die Klassen erstellt beim Start der Applikation
+* Danach muss die SoundStage initialisiert werden
+* Ab dann kann auf der SoundStage das Audio verwendet werden -> siehe bsp. wechseln zu Lautsprecher

@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns="http://maven.apache.org/POM/4.0.0"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>com.blackout</groupId>
+    <artifactId>Documentation</artifactId>
+    <version>1.0.0</version>
+    <properties>
+        <maven.compiler.source>17</maven.compiler.source>
+        <maven.compiler.target>17</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <!-- dependency properties -->
+        <asciidoctorj.pdf.version>2.3.7</asciidoctorj.pdf.version>
+        <!-- plugin properties -->
+        <asciidoctor-maven-plugin.version>2.2.3</asciidoctor-maven-plugin.version>
+        <asciidoc-confluence-publisher-maven-plugin.version>0.19.0</asciidoc-confluence-publisher-maven-plugin.version>
+    </properties>
+    <build>
+        <plugins>
+            <!-- PDF Theming: https://github.com/asciidoctor/asciidoctor-maven-examples/tree/main/asciidoctor-pdf-with-theme-example -->
+            <plugin>
+                <groupId>org.asciidoctor</groupId>
+                <artifactId>asciidoctor-maven-plugin</artifactId>
+                <version>${asciidoctor-maven-plugin.version}</version>
+                <dependencies>
+                    <dependency>
+                        <groupId>org.asciidoctor</groupId>
+                        <artifactId>asciidoctorj-pdf</artifactId>
+                        <version>${asciidoctorj.pdf.version}</version>
+                    </dependency>
+                </dependencies>
+                <executions>
+                    <execution>
+                        <id>generate-sad-pdf</id>
+                        <phase>generate-resources</phase>
+                        <goals>
+                            <goal>process-asciidoc</goal>
+                        </goals>
+                        <configuration>
+                            <sourceDirectory>03_sad</sourceDirectory>
+                        </configuration>
+                    </execution>
+                    <execution>
+                        <id>generate-hardware-pdf</id>
+                        <phase>generate-resources</phase>
+                        <goals>
+                            <goal>process-asciidoc</goal>
+                        </goals>
+                        <configuration>
+                            <sourceDirectory>02_hardware</sourceDirectory>
+                        </configuration>
+                    </execution>
+                    <execution>
+                        <id>generate-testing-pdf</id>
+                        <phase>generate-resources</phase>
+                        <goals>
+                            <goal>process-asciidoc</goal>
+                        </goals>
+                        <configuration>
+                            <sourceDirectory>04_testing</sourceDirectory>
+                        </configuration>
+                    </execution>
+                    <execution>
+                        <id>generate-dev-pdf</id>
+                        <phase>generate-resources</phase>
+                        <goals>
+                            <goal>process-asciidoc</goal>
+                        </goals>
+                        <configuration>
+                            <sourceDirectory>05_dev</sourceDirectory>
+                        </configuration>
+                    </execution>
+                </executions>
+                <configuration>
+                    <backend>pdf</backend>
+                </configuration>
+            </plugin>
+            <!-- Doc: https://confluence-publisher.atlassian.net/wiki/spaces/CPD/overview -->
+            <plugin>
+                <groupId>org.sahli.asciidoc.confluence.publisher</groupId>
+                <artifactId>asciidoc-confluence-publisher-maven-plugin</artifactId>
+                <version>${asciidoc-confluence-publisher-maven-plugin.version}</version>
+                <executions>
+                    <execution>
+                        <id>publish-documentation-sad</id>
+                        <goals>
+                            <goal>publish</goal>
+                        </goals>
+                        <phase>site</phase>
+                        <configuration>
+                            <!-- root SAD: pageId -->
+                            <ancestorId>101189608</ancestorId>
+                            <asciidocRootFolder>03_sad</asciidocRootFolder>
+                        </configuration>
+                    </execution>
+                    <execution>
+                        <id>publish-documentation-hardware</id>
+                        <goals>
+                            <goal>publish</goal>
+                        </goals>
+                        <phase>site</phase>
+                        <configuration>
+                            <!-- root Hardware: pageId -->
+                            <ancestorId>101189614</ancestorId>
+                            <asciidocRootFolder>02_hardware</asciidocRootFolder>
+                        </configuration>
+                    </execution>
+                    <execution>
+                        <id>publish-documentation-testing</id>
+                        <goals>
+                            <goal>publish</goal>
+                        </goals>
+                        <phase>site</phase>
+                        <configuration>
+                            <!-- root Testing: pageId -->
+                            <ancestorId>101189610</ancestorId>
+                            <asciidocRootFolder>04_testing</asciidocRootFolder>
+                        </configuration>
+                    </execution>
+                    <execution>
+                        <id>publish-documentation-dev</id>
+                        <goals>
+                            <goal>publish</goal>
+                        </goals>
+                        <phase>site</phase>
+                        <configuration>
+                            <!-- root Dev: pageId -->
+                            <ancestorId>101189612</ancestorId>
+                            <asciidocRootFolder>05_dev</asciidocRootFolder>
+                        </configuration>
+                    </execution>
+                </executions>
+                <configuration>
+                    <sourceEncoding>UTF-8</sourceEncoding>
+                    <rootConfluenceUrl>https://www.cs.technik.fhnw.ch/confluence20</rootConfluenceUrl>
+                    <skipSslVerification>false</skipSslVerification>
+                    <maxRequestsPerSecond>10</maxRequestsPerSecond>
+                    <spaceKey>VT122206</spaceKey>
+                    <username>${confluence_username}</username>
+                    <password>${confluence_password}</password>
+                    <orphanRemovalStrategy>REMOVE_ORPHANS</orphanRemovalStrategy>
+                    <pageTitlePrefix xml:space="preserve">GENERIERT :: </pageTitlePrefix>
+                    <pageTitleSuffix xml:space="preserve"> [${project.version}]</pageTitleSuffix>
+                    <versionMessage>Diese Seite wurde automatisch generiert: version ${project.version}</versionMessage>
+                    <notifyWatchers>false</notifyWatchers>
+                    <attributes>
+                        <version>${project.version}</version>
+                        <someOtherKey>value</someOtherKey>
+                    </attributes>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+</project>

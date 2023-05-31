@@ -1,0 +1,11 @@
+"Blackout" ist ein Produkt, genauer gesagt ein Quizspiel, das auf einem Raspberry Pi läuft. Es besteht aus einer Java-Software, die auf dem Raspberry Pi installiert ist. Das Spiel kann entweder von einer einzelnen Person oder von zwei Spielern an zwei Displays gespielt werden. Jedes Display verfügt über einen Lautsprecher, über den Sounds abgespielt werden können.
+
+Das Ziel von "Blackout" ist es, Wissen zum Thema Energie zu vermitteln und gleichzeitig eine unterhaltsame Spielerfahrung zu bieten. Das Spiel folgt einem bestimmten Narrativ, das von "Kulana", einem Mädchen, und ihren Kolleginnen und Kollegen in einem Haus auf dem Land handelt. Kulana hat viel Wissen über Energie und Klima und lebt nachhaltig, indem sie versucht, möglichst viel Strom selbst zu produzieren und zusätzlichen Strom aus erneuerbaren Quellen zu beziehen.
+
+Das Quiz im Spiel besteht aus fünf Fragen zum Thema Energie. Zu jeder Frage gibt es vier Antwortmöglichkeiten im Multiple-Choice-Format, von denen ein bis vier richtig sein können. Nach jeder Frage wird die richtige Antwort eingeblendet, die erreichten Punkte und die Lösung werden erklärt.
+
+Am Ende jeder Quizrunde wird den Spieler:innen ein QR-Code angezeigt, über den sie auf eine Webseite gelangen können. Diese Webseite bietet eine detaillierte Auswertung der Quizrunde, einschließlich der Punktzahl, aller gestellten Fragen, der gegebenen Antworten und der richtigen Antworten.
+
+"Blackout" wurde entwickelt, um den Besuch eines Energie-Museums zu gamifizieren und den Spielern eine zusätzliche Motivation zu bieten, die Exponate des Museums zu erkunden und zu bearbeiten. Es soll eine spannende Spielerfahrung bieten und gleichzeitig Wissen über Energie vermitteln.
+
+link:https://www.cs.technik.fhnw.ch/confluence20/display/VT122206/Produktvision#Produktvision-Stakeholders[Aufgabenstellung]

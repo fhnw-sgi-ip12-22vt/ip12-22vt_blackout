@@ -1,0 +1,23 @@
+=== Team
+
+[%autowidth]
+|===
+2+|*Beschreibung*
+2+| In diesem Testfall wird geprüft, ob der Versusmodus gespielt werden kann
+2+|*Vorbedingung*
+2+|Blackout Applikation ist auf dem Raspberry Pi gestartet.
+2+|*Testdaten*
+2+|Keine vonnöten
+|*Schritte*
+|*Resultat*
+| 1. Blackout im Versusmodus starten und den Zufallsmodus wählen.
+| -
+| 2. Fragen werden angezeigt.
+| Ja
+| 3. Alle Fragen beantworten und Antworten merken
+| -
+| 4. End-Screen mit QR-Code wird angezeigt.
+| Ja
+| 5. QR-Code scannen und prüfen, ob die richtigen Resultate angezeigt werden.
+| Ja
+|===

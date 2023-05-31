@@ -1,0 +1,38 @@
+[[section-design-decisions]]
+== Architekturentscheidungen
+
+=== Software Entscheidungen
+Aufgrund den Randbedingungen Kunde müssen folgende Entscheidungen getroffen werden.
+
+==== Detaillierte Dokumentation für den Betrieb
+Für den betrieb der Software muss eine detaillierte Anleitung geschrieben werden, sodass eine fachunkundige Person das Produkt bedienen kann.
+Der Inhalt soll folgendes Umfassen:
+
+* Starten von Blackout
+* Betrieb
+* Stoppen
+* Troubleshooting
+* Fragen aktualisieren
+
+Dafür müssen wir eine Testperson finden, welche diese Anleitung durchtestet -> Planung noch offen.
+
+==== Raspberry PI Image
+Mit https://github.com/RPi-Distro/pi-gen[PI Gen] kann ein Custom Image erstellt werden. Dafür muss eine Dev Anleitung geschrieben werden.
+https://opensource.com/article/21/7/custom-raspberry-pi-image[Anleitung]
+Todo -> Detailliert Dokumentieren und testen
+
+==== JAR Datei
+Damit eine FAT JAR Datei gebaut werden kann, kann das Shade Plugin verwendet werden. Auch muss das Java Module System ausgeschaltet werden.
+Dafür muss eine JDK mit integrierten JavaFX verwendet werden, weil sonst die App nicht ohne diese Dependency ausgeführt werden kann.
+Auch kann die JavaFX Abhängigkeit nicht mit eingepackt werden, da nur Plattformspezifische Abhängigkeiten eingebaut werden können bspw. gebaut auf windows nur windows version eingepackt. Daher verwenden wir die JDK von Bellsoft.
+
+==== Startscript
+Für das Startscript kann Bash verwendet werden. Für das automatisierte Starten der Applikation kann im autostart eine .desktop Verknüpfung erstellt werden.
+
+==== Fragen ohne Neubuilden ändern
+Damit Fragen ohne Fachkenntnisse geändert werden können, wird ein NodeJS server entwickelt, der eine Applikation für das Anpassen der Fragen bietet. Des Weiteren ist er für das Hosten der QR-Website zuständig. Die Java App versucht sich mit dem NodeJS server zu verbinden, um dann die aktuelleste Version herunterzuladen. Sonst wird als Fallback auf die Lokale Version zurückgegriffen. Auch soll die Java App die Möglichkeit bieten, dass die URL zum NodeJS Server angepasst werden kann, falls er sich ändert (Mit Kunde abgesprochen). TODO -> Zugang absichern
+
+==== Troubleshooting
+Damit ein einfaches Troubleshooting durchgeführt werden kann, soll die Java APP ein Testmodus haben. Dieser Testmodus testet die Buttoneingabe, die LED der Buttons und den Ton. Soll jeweils beim Start angezeigt werden oder über ein Menu aufgerufen werden (Mit Kunde abgesprochen).
+
+include::../../01_general/hardware_decisions.adoc[]

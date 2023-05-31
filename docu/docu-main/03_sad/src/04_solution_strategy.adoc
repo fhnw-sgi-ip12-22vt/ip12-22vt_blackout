@@ -1,0 +1,30 @@
+[[section-solution-strategy]]
+== Lösungsstrategie
+
+=== Erreichen der Qualitätsziele
+.Erreichen von Qualitätszielen
+[cols="1, 1"]
+|===
+|Qualitätsziel |Architekturentscheide für die Erfüllung
+.3+|Funktionale Eignung
+|Blackout dient als Spiel für die Gamification des Museumsbesuchs
+|Blackout ist Mehrspielerfähig
+|Blackout ist sehr interaktiv gestaltet
+
+.3+|Zuverlässigkeit
+|Blackout ist mit bewährten Komponenten gebaut
+|Blackout verwendet besonders stabile Komponenten
+|Blackout als Softwaresystem ist auf Ausfallsicherheit getrimmt
+
+.3+|Wartbarkeit
+|Blackout verwendet stabile Komponenten die nicht oft ausgetauscht werden müssen
+|Blackout verwendet einfach beziehbare Komponenten
+|Blackout als Softwaresystem ist erweiterbar und simple konzipiert, dass Wartungen und Erweiterungen möglich sind
+
+.3+|Benutzerfreundlichkeit
+|Blackout hat ein simples Eingabekonzept
+|Blackout verwendet ein simples Spielprinzip
+|Blackout ist ohne Probleme verständlich
+|===
+
+link:https://www.cs.technik.fhnw.ch/confluence20/display/VT122206/Kritische+Erfolgsfaktoren[Qualitätsziele]

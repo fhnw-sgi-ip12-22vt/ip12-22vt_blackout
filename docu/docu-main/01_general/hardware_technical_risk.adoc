@@ -1,0 +1,11 @@
+.Risiken und technische Schulden Hardware
+[cols="e, 2e, 3e", options="header"]
+|====
+|Risiken/Schulden |Beschreibung |Massnahme
+|Display ist kaputt |Das Display funktioniert nach einem Test nicht mehr |Prüfen, wo das Problem liegt und evtl. ersetzen
+|Gewisse Buttons leuchten |Gewisse Buttons leuchten, obwohl sie nicht eingeschaltet sind |Laut Recherche normal und auch gemessen mit einem Messgerät einfach beim Start deaktivieren mit einem Script
+|Elektr. Schaltplan nicht vorhanden |Der elektronische Schaltplan ist nicht vorhanden. |In der Projektwoche gas geben und zusammen im Team integrieren
+|Hardware ist noch nicht integriert |Die Hardware ist nicht integriert. |In der Projektwoche gas geben und zusammen im Team integrieren
+|3D-Druck klappt nicht |Das 3D-Modell ist zu gross für den Anbieter |Neuer Anbieter suchen oder Modell aus Holz bauen
+|Lange Lieferzeiten |Die Lieferzeiten für das Model ist sehr lang |Anrufen, E-Mail oder persönlich abholen
+|====

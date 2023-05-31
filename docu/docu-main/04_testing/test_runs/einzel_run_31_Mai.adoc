@@ -1,0 +1,20 @@
+== Testdurchlauf vom Test: Einzel
+
+[%autowidth]
+|===
+|*Datum* | 31.05.2023
+|*Verantwortlich* | Andri Pieren
+|===
+
+include::../test_case/einzel.adoc[Testbeschreibung]
+
+// TODO Status anpassen
+=== Status -> Test has ❌/✅
+
+Die Bestimmung des Bestanden / Nicht Bestanden-Status hängt davon ab, wie das erwartete Ergebnis und +
+das tatsächliche Ergebnis miteinander verglichen werden.
+
+*Gleiches Ergebnis* = Bestanden/Pass -> ✅
+*Unterschiedliche Ergebnisse* = Fehlschlagen/Fail -> ❌
+
+=== Eventuelle Bemerkungen

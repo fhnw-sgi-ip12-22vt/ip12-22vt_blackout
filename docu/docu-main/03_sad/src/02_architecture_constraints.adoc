@@ -1,0 +1,95 @@
+[[section-architecture-constraints]]
+== Randbedingungen
+Die Randbedingungen umfassen die technische, organisatorische und politische Randbedingung des Projektes.
+Diese sind unten nach ihren Randbedingungen und Erläuterungen aufgelistet.
+
+=== Politische Randbedingungen
+
+.politische Randbedingungen
+[cols="1, 2"]
+|===
+|ID |Einschränkung
+|E06 |Das Spiel muss haptisch sein.
+|E04 |Das Spiel muss interaktiv sein.
+|E05 |Das Spiel muss mehrspielerfähig sein.
+|E08 |Das Spiel muss transportierbar sein.
+|E03 |Das Spiel muss unabhängig von einer Internetverbindung funktionieren.
+|E07 |Das Spielergebnis muss vergleichbar, sprich kompetitiv sein.
+|E01 |Die Sensoren und Aktoren müssen über einen Raspberry Pi verbunden betrieben werden.
+|E02 |Die Software muss in Java geschrieben sein.
+|===
+
+link:https://www.cs.technik.fhnw.ch/confluence20/display/VT122206/Produktvision[Politische Einschränkungen]
+
+=== Technische Randbedingungen
+
+.Technische Randbedingungen
+[cols="1, 2"]
+|===
+|Randbedingung |Erläuterung
+
+|Hardware
+|Das Spiel Blackout soll auf einem Raspberry Pi 4 laufen. Dieser Einplatinencomputer bringt Begrenzungen bezüglich der
+Leistungsfähigkeit sowie der Ausgabemöglichkeiten.
+
+|Raspbian (Debian basierte Distribution)
+|Die Applikation soll auf Raspbian laufen.
+
+|Java 17
+|Die Applikation soll mit Java 17 entwickelt werden
+
+|Pi4J
+|Die Applikation soll mit der Pi4J Library entwickelt werden.
+
+|SQLite DB
+|SQLite soll als DB verwendet werden.
+
+|JUnit5
+|JUnit4 soll als Testframework verwendet werden
+
+|Team
+|Team besteht aus 7 Leuten.
+
+|Zeithorizont
+|Im Sommer 2023 soll die Applikation fertig sein.
+
+|Vorgehensmodell
+|Iterative and incremental development
+
+|Entwicklungswerkzeuge
+|Intellij IDEA
+
+|Versionsverwaltung
+|GIT
+
+|Architekturdokumentation
+|arc42
+
+|Kodierrichtlinien
+|Siehe Coding Conventions
+
+|Spiel
+|Die Spiele sollen nicht nur am Computer gespielt werden können, sondern haptische Elemente enthalten.
+
+|Spiel
+|Das Spiel soll transportabel sein.
+
+|Verbindung
+|Das Spiel soll auch ohne Internet funktionieren.
+
+|Qualitätsanforderung
+|Das Spiel soll weitere erforderliche nicht-funktionalen Anforderungen umsetzen: Robustheit, Wartbarkeit, Fehlertoleranz.
+
+|Dokumentation
+|Die Übergabe soll geplant und das Spiel entsprechend dokumentiert werden. kurze Spielanleitung. Anleitung zur Inbetriebnahme und Aufbewahrung
+
+|Tests
+|Funktionierende, dokumentierte und relevante Tests (sowohl automatisierte als auch manuelle Tests)
+
+|Source Code
+|Source Code (öffentliches git repository)
+|===
+
+=== Randbedingung Kunden
+
+include::../../01_general/delivery_constraints.adoc[]

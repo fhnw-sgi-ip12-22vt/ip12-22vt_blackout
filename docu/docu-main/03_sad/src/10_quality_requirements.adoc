@@ -1,0 +1,32 @@
+[[section-quality-scenarios]]
+== Qualitätsanforderungen
+Im Abschnitt Qualitätsanforderungen werden die Qualitätsziele weiter verfeinert. Die heruntergebrochene Anforderungen werden in ihren Szenarien weiter beleuchtet.
+
+// TODO absprechen mit dem Qualitätsmanager und Requirementsmanager
+=== Qualitätsbaum
+Der Qualitätsbaum stellt die Verfeinerung der Qualitätszielen dar.
+
+.Qualitätsbaum
+image::../00_images/qualitaetsbaum.png[Qualtitätsbaum]
+
+=== Qualitätsszenarien
+Bei den Qualitätsszenarien wird genauer auf die einzelnen Szenarien eingegangen.
+
+.Qualitätsszenarien
+[cols="e, 2e", options="header"]
+|====
+|ID |Szenario
+|W01|Ein Entwickler kann seine Ideen ohne grosse Änderung und ohne Übersetzung des vorhandenen Codes in bestehende Strategien integrieren.
+|W02|Komplexere Fragen können leicht implementiert und in die Lösung integriert werden. Wenn ein Java-Programmierer unseren Fragenkatalog abändern möchte, kann er die Frage ohne grossen Aufwand einfügen.
+|W03|Jemand mit Grundkenntnissen in UML und dem Verständnis wie ein Quiz Spiel funktioniert, möchte einen Einstieg in die Architektur von unserem Spiel. Lösungsstrategie und Entwurf erschliessen sich ihr oder ihm innerhalb von 30 Minuten.
+|W04|Ein Software-Architekt, der das Spiel anwenden möchte, sucht zu einem beliebigen Thema einen konkreten Beispielinhalt und findet ihn unverzüglich in der Dokumentation.
+|F01|Wenn einen Fehler auftritt, soll der Benutzer möglichst wenig davon mitbekommen und das System soll sich wieder fangen können oder mit Ein- und Ausschalten wieder in einen fehlerlosen Zustand zurückgesetzt werden.
+|F02|Blackout wechselt bei Untätigkeit im Hauptmenü in den Wartezustand.
+|F03|Blackout reagiert auf die Buttons und tätigt die entsprechende Auswahl.
+|E01|Während eines Spiels reagiert Blackout auf die Buttons innerhalb von zwei Sekunden mit der Auswahl.
+|E02|Falls keine Eingabe mehr kommt kehrt Blackout nach einer bestimmten Zeit wieder in den Idle Zustand. Diese Zeit ist einstellbar nach den Wünschen von Primeo.
+|B02|Das Design der Bedienungskomponenten / UI wird so gestaltet, dass es zusammen mit der Spielanleitung ohne weitere Erklärungen verstanden wird.
+|B03|Das System lässt sich einfach Konfigurieren und hochfahren. Die Fragen können einfach eingelesen werden.
+|B04|Nach dem Spielen gibt das System eine Rückmeldung bei der ersichtlich ist wo man das Wissen aufarbeiten kann.
+|Z01|Blackout soll einfache Eingabe und Ausgabemöglichkeiten bieten, sodass die Besucher:innen ohne Vorkenntnisse bedienen können.
+|====

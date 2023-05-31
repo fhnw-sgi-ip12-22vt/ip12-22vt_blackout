@@ -1,0 +1,13 @@
+[[section-technical-risks]]
+== Risiken und technische Schulden
+Im Kapitel Risiken und technische Schulden werden die Architekturrisiken und technische Schulden aufgelistet und deren Massnahmen um diese abzubauen, vermeiden oder minimieren.
+
+include::../../01_general/hardware_technical_risk.adoc[]
+
+.Risiken und technische Schulden Software
+[cols="e, 2e, 3e", options="header"]
+|====
+|Risiken/Schulden |Beschreibung |Massnahme
+|Softwarearchitektur könnte vereinfacht werden |Bezüglich der Softwarearchitektur gibt es noch optimierungspotential |Zusammensitzen und anschauen und bei genügend Zeit umsetzen
+|Codedokumentation |Siehe Schuldtitel |Dokumentieren, Dokumentieren, Dokumentieren ...
+|====

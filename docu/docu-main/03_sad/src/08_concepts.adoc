@@ -1,0 +1,59 @@
+[[section-concepts]]
+== Querschnittliche Konzepte
+Der Abschnitt Querschnittliche Konzepte beschreibt übergreifende Regelungen und Lösungsansätze.
+
+=== States
+Das Spiel beinhaltet mehrere Zustände. Von diesen Zuständen aus kann zu anderen oder wieder zurückgewechselt werden. Dadurch dass das Spiel mehrere Aspekte hat, sind diese am besten mit Zuständen repräsentiert. Hier sehen wir alle mögliche State der BlackoutApplikation.
+
+.Activitydiagramm
+image:../00_diagrams/state_diagram.png[Activitydiagramm]
+
+*Gründe für die States:*
+
+Spielstand speichern: Durch die Verwendung von States kann "Blackout" den Spielstand speichern. Das bedeutet, dass der aktuelle Fortschritt des Spiels, wie beispielsweise die aktuelle Frage, die bereits gegebenen Antworten und die erzielten Punkte, gespeichert werden können. Dadurch können die Spieler das Spiel unterbrechen und später an derselben Stelle wieder fortsetzen, ohne den Fortschritt zu verlieren.
+
+Spiellogik steuern: States ermöglichen es dem Spiel, die Logik und den Ablauf des Quizspiels zu steuern. Das Spiel kann beispielsweise den aktuellen Zustand des Spiels verfolgen, ob sich die Spieler im Team-Modus oder 1:1-Modus befinden, ob eine Frage gestellt wird oder ob die Antwortzeit abgelaufen ist. Basierend auf diesen Zuständen kann das Spiel die entsprechenden Aktionen ausführen, wie das Anzeigen der nächsten Frage oder die Auswertung der Antworten.
+
+Spielerinteraktion verfolgen: States ermöglichen es dem Spiel, die Interaktion der Spieler zu verfolgen und entsprechend zu reagieren. Das Spiel kann beispielsweise speichern, welche Antwort(en) ein Spieler ausgewählt hat, um dies bei der Bewertung und Punktevergabe zu berücksichtigen. Durch das Verfolgen der Spielerinteraktion kann das Spiel auch die Kommunikation zwischen den Spielern im Team-Modus überprüfen und entsprechende Rückmeldungen oder Hinweise geben.
+
+Auswertung und Ergebnisse: States sind wichtig, um die Ergebnisse und Auswertungen der Quizrunden zu speichern. Das Spiel kann den erreichten Punktestand, die richtigen Antworten, die Anzahl der beantworteten Fragen und andere statistische Informationen in den States speichern. Diese Informationen können dann verwendet werden, um den Spielern am Ende einer Runde eine detaillierte Auswertung zu präsentieren oder sie zur weiteren Analyse an eine Auswertungswebseite zu senden.
+
+Durch die Verwendung von States kann "Blackout" also den Spielstand speichern, die Spiellogik steuern, die Spieler-Interaktion verfolgen und Ergebnisse speichern. Dadurch wird eine reibungslose Spielerfahrung ermöglicht und das Spiel kann personalisierte Rückmeldungen und Auswertungen bieten.
+
+=== Konsole
+Die Spieler haben eine eigene Konsole, mit dieser Konsole interagieren sie mit dem System Blackout. Somit sind die Eingaben und Ausgaben für die einzelnen Spieler sauber abgekapselt.
+
+
+.Konsole als Komponenten diagramm
+image:../00_diagrams/konsole_component_diagram.png[Konsole als Komponentendiagramm]
+
+=== MVC Architektur mit dem Projektor Pattern
+Damit wir eine saubere Architektur haben, haben wir uns für MVC mit dem Projektor entschieden.
+
+Die MVC-Architektur (Model-View-Controller) ist ein Entwurfsmuster für die Softwareentwicklung. Sie besteht aus drei Komponenten: dem Modell, das die Daten und die Geschäftslogik enthält, der Ansicht, die für die Darstellung der Benutzeroberfläche zuständig ist, und dem Controller, der die Kommunikation zwischen Modell und Ansicht verwaltet. line
+
+Das Modell repräsentiert die Daten und die Logik der Anwendung, während die Ansicht die Darstellung der Daten für den Benutzer übernimmt. Der Controller steuert die Interaktionen des Benutzers mit der Anwendung und aktualisiert das Modell und die Ansicht entsprechend.
+
+Die MVC-Architektur ermöglicht eine klare Trennung von Daten, Präsentation und Steuerungslogik, was zu einer besseren Wartbarkeit, Skalierbarkeit und Wiederverwendbarkeit von Code führt. Sie wird häufig in Webanwendungen, Desktop-Anwendungen und anderen Softwareprojekten eingesetzt.
+
+.MVC geklaut von Dieter Holz link:https://github.com/DieterHolz/RaspPiFX-Template-Project/blob/master/assets/mvc-concept.png[Original]
+image:../00_diagrams/mvc-concept.png[MVC Konzept]
+
+=== Audio
+Wir haben die Anforderung für unser Projekt Audio auf total 4 Audiogeräten abzuspielen, jedoch nur auf 2 Audiogeräten gleichzeitig. Das Audio muss nicht synchron sein, sondern auf den 2 aktuellen Audiogeräten spielt unterschiedliches Audio. Den der Spieler hat jeweils eine eigene Konsole, auf der er das Spiel spielen kann, diese Konsole hat 2 Audioausgänge -> Lautsprecher und Kopfhörer.
+Da keine Library diese Anforderung abdeckt, entwickelten wir eine eigene Audio Engine (Wir verwenden java.sound.api als low level Library um mit den Audiogeräten zu interagieren).
+Unsere Audio Engine kann Wave Dateien mit 44'100 hz und 32-bit float auf den mehreren Audioausgängen gleichzeitig abspielen.
+Jeweils können 3 Audiodateien gleichzeitig auf drei Kanälen abgespielt werden. Unten ist das Audio Processing als Flowchart ersichtlich
+
+.Audio Processing als Flowchart Diagramm
+image:../00_diagrams/audio_pocessing_flow_chart.png[Audio Processing]
+
+Damit das Audio ohne Probleme spielt, läuft es auf einem separaten Thread (Wir verwenden java.util.concurrent für das Threading). Hier ist die Interkation zwischen dem Main-Thread und dem AudioThread aufgelistet.
+
+.Audio Threading
+image:../00_diagrams/audio_threading_overview.png[Audio Threading]
+
+
+=== Raspberry Pi Konfiguration
+Für die Konfiguration des Raspberry Pi haben wir eine config.sh Datei erstellt, welche die Dateien an den richtigen Ort kopiert, sowie die richtige JDK von Bellsoft herunterlädt.
+Des Weiteren muss, die Taskleiste ausgeblendet werden und im Dateiexplorer, das Öffnen von Scripten ohne Warnungen eingestellt werden. Auch sollte die Scripten mit chmod +x "Dateiname" ausführbar gemacht werden.

@@ -1,0 +1,14 @@
+.Kundenbedingungen und Lieferbedingungen
+[cols="1"]
+|===
+|Erläuterung
+|Dokumentation zum Betrieb des Produktes (Start, Stop, Troubleshooting, Reset etc.)
+|Dokumentation zum Code und Devsetup
+|Dokumentation zum Deployment
+|Dokumentation zur Hardware
+|Raspberry PI Image mit lauffähigem Stand
+|Jar Datei mit StartScript
+|Dateien für den 3D-Druck
+|Produkt soll weiterentwickelt werden
+|Fragen sollen ohne dem Neubuilden angepasst werden
+|===

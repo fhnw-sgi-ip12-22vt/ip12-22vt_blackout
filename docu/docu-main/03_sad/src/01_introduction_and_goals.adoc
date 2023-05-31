@@ -1,0 +1,33 @@
+[[sectioon-introduction-and-goals]]
+== Einführung und Ziele
+In diesem Kapitel wird auf die Aufgabenstellung, die funktionale Anforderung an das Produkt und dessen Qualitätsziele
+eingegangen. Des Weiteren wird ein genauer Blick auf die Stakeholder und deren Erwartungshaltung geworfen. Es bietet
+somit einen Überblick über die Rahmenbedingungen für das geplante System.
+
+=== Aufgabenstellung
+Die fachliche Aufgabenstellung besteht darin, ein neues System zu entwickeln oder ein bestehendes zu modifizieren, um eine bestimmte fachliche Aufgabe zu unterstützen oder die Qualität zu verbessern. Es wird darauf hingewiesen, dass detaillierte Anforderungsdokumente vorhanden sind, die auf die entsprechenden Versionen und Ablageorte verweisen. Die Motivation für das Projekt liegt in der zukünftigen Nutzung und dem Streben nach Effizienzsteigerung.
+
+==== Was ist Blackout?
+include::../../01_general/task.adoc[]
+
+==== Wesentliche Features
+
+* Quizspiel: "Blackout" ist ein interaktives Quizspiel, das den Spielern Fragen zum Thema Energie stellt. Die Fragen sind im Multiple-Choice-Format gestaltet, und die Spieler müssen die richtigen Antworten auswählen.
+
+* Team-Modus: Das Spiel bietet einen Team-Modus, in dem zwei Spieler zusammenarbeiten müssen, um die Fragen zu beantworten. Spieler 1 sieht nur die Frage, während Spieler 2 nur die Antwortmöglichkeiten sieht. Die Spieler müssen miteinander kommunizieren, um die richtige Antwort zu finden.
+
+* 1:1-Modus: Im 1:1-Modus treten zwei Spieler gegeneinander an. Beide Spieler sehen sowohl die Frage als auch die Antwortmöglichkeiten auf ihren eigenen Displays. Am Ende vergleichen sie ihre Punktzahlen, um zu sehen, wer mehr Punkte erreicht hat.
+
+* Einzel-Modus: Im Einzel-Modus kann das Quiz von einer einzelnen Person alleine gespielt werden. Hierbei geht es darum, die Fragen möglichst korrekt zu beantworten und eine hohe Punktzahl zu erzielen.
+
+* Narrativ von "Kulana": Das Spiel verwendet das Narrativ von "Kulana", einem Mädchen, das mit ihren Kolleginnen und Kollegen in einem nachhaltigen Haus auf dem Land lebt. Kulana hat viel Wissen über Energie und Klima. Das Narrativ dient dazu, den Kontext des Spiels zu bereichern und den Spielern eine Verbindung zur Hauptfigur herzustellen.
+
+* Rückmeldung und Auswertung: Nach jeder Quizrunde erhalten die Spieler eine Rückmeldung über ihre Punktzahl und die richtigen Antworten. Diese Rückmeldung wird durch einen QR-Code angezeigt, über den die Spieler auf eine Webseite gelangen, auf der sie eine detaillierte Auswertung ihrer Quizrunde erhalten.
+
+* Gamification des Museumsbesuchs: "Blackout" wurde entwickelt, um den Besuch eines Energie-Museums zu gamifizieren. Das Spiel soll den Spielern eine zusätzliche Motivation bieten, die Exponate des Museums zu erkunden und zu bearbeiten. Durch das Erzielen hoher Punktzahlen im Quiz können die Spieler ihre Leistung beim Bearbeiten der Exponate verbessern.
+
+=== Qualitätsziele
+include::../../01_general/quality_goals.adoc[]
+
+=== Stakeholders
+include::../../01_general/stakeholder.adoc[]

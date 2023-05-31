@@ -1,0 +1,44 @@
+
+[[section-glossary]]
+== Glossar
+Im Glossar sind Projektspezifische Begriffe genau definiert, sodass alle Beteiligten die gleiche Sprache sprechen und einen zentralen Ort um Begriffsdefinitionen nachzuschlagen.
+
+.Glossar
+[cols="e,4e" options="header"]
+|===
+|Begriff |Definition
+
+|1vs1|Spieler:in spielen mindestens zu zweit und gegeneinander.
+|Antwortauswahl|Durch das Betätigen der Knöpfe 1-3.
+|Antwortmöglichkeiten|Antwortmöglichkeiten, welche im Quiz-Spiel vorkommen.
+|Anzeigedisplay|Das Anzeigedisplay dient als Standartausgabe des Spiels.
+|Auswählen|Mittels drücken desButtons die Antworten anwählen.
+|Bestätigung|Durch das Betätigen des Enterknopfs.
+|Blackout|Blackout ist der Name des Spiels, welches das Team Wechselspiel umsetzt.
+|Countdown|3 Sekunden Countdown vor dem Spielstart.
+|Cube|Das ganze physische Spiel inklusive Ober- und Unterbau.
+|Einzelmodus|Spieler:in spielt alleine. Sieht Fragen und Antwortmöglichkeiten.
+|Exponate|Ausstellungsstücke für den Primeo Energie Kosmos.
+|Feedbackmodus|Im Feedbackmodus werden Fragen aus dem besuchten Raum ausgewählt und abgefragt.
+|Fragen|Fragen, welche im Quiz-Spiel vorkommen.
+|Gamifizierung|Integration von gaming-typischen Elementen. Feedback, Highscore System.
+|GPIO|General Purpose Input Output - Pins beim Raspberry Pi.
+|Haptische Elemente|Auswahl- und Eingabebuttons.
+|Hardware|Alle Einzelteile, welche zum Produkt gehören.
+|Kulana|Junge Expertin für Energiefragen namens Kulana, welche die Spielenden durch das Quiz navigiert. Das Narrativ begleitet das gesamte Projekt.
+|Lernwelt Energie|Abteilung des Energie Kosmos’ – über Klima- & Energieinteressierte: für Schulen, die Öffentlichkeit, Firmen und Partner.
+|Oberbau|Der obere Teil des Cubes. Kann separat abgehoben werden. Er beinhaltet die Displays und den Ausschaltbutton.
+|Primeo|Energie Kosmos	Science und Erlebnis Center für Klima & Energie der Primeo Energie AG.
+|QR-Code|Leitet auf die Webseite mit dem Score weiter.
+|Quiz-Spiel|Frage-Antwort-Spiel.
+|Raum|Örtlichkeit mit Exponaten bei Primeo Energie AG.
+|Score/Highscore|Spielresultat am Ende, welches auf unserer Webseite präsentiert wird.
+|Spielmodus|Auswahl zwischen Einzelmodus und 1vs1-Modus.
+|Startbildschirm|Der erste Screen der erscheint für die Besucher.
+|Statistik|Die Analyse der Antworten die richtig oder falsch beantwortet wurden. Wird über den gesammten Zeitraum gesammelt.
+|Team Wechselspiel|Gruppenname IP12.
+|Timeout|Wenn Spieler:innen die Frage nicht beantworten, wird das Ergebnis nicht angezeigt.
+|Unterbau|Der untere Teil des Cubes. Kann mittels einer Schublade unten geöffnet werden. Er beinhaltet den Raspberry Pi, alle Kabel und Buttons.
+|Vorschlagsmodus|Das Spiel enthält einen Vorschlagsmodus für die Schüler:innen. Im Vorschlagsmodus werden 3 Fragen zufällig ausgewählt.
+|Webseite|Zugang zur Auswertung der Fragen und Eingabe neuer Fragen.
+|===

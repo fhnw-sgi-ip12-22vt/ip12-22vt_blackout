@@ -1,0 +1,40 @@
+// TODO neu machen (Eigentlich sollte nichts gemacht werden)?
+
+== Systemidee
+Als Grundlage Ihrer Entwurfstätigkeiten sollten Sie eine Vorstellung wichtiger Systemeigenschaften und Anforderungen besitzen und mindestens folgende Fragen über das System beantwortet haben.
+
+== Kernaufgabe des Systems
+****
+Das Spiel Blackout (Projektnamen) wird das Wechselspiel von Energiequellen thematisieren,
+indem Strombestellungen, die aus einem Strommix aus: Solarkraft, Windkraft, Pumpspeicherwerk und Gas kombiniert werden, abgearbeitet werden und ein möglicher Blackout somit verhindert wird.
+Im Spiel werden interaktiv die Bestellungen abgearbeitet und dabei die Eigenschaften der Energiequellen aufgezeigt.
+Wenn die Bestellung interaktiv abgearbeitet wurde, wird das Wissen des Spielers mit einer Blackoutfrage geprüft.
+****
+
+== Kategorie von System
+****
+- Mobile Systeme: Eine (moderne) Variante von Online-Systeme - durch die starke Verbreitung von Smartphones und Tablet-Computern sehr wichtig geworden. Starker Fokus auf Benutzeroberfläche und Benutzbarkeit, oftmals per Internet an Backend-Systeme angebunden.
+- Eingebettete Systeme (embedded systems): arbeiten eng verzahnt mit spezieller Hardware. Ein Beispiel für eingebettete Systeme sind Mobiltelefone (viele haben auch Echtzeitanforderungen).
+****
+
+== Wesentliche Qualitätsanforderungen
+
+****
+ISO 25010 Qualitätsstandard::
+Wichtige Qualitätsanforderungen, die das Spiel Blackout erfüllen muss:
+
+* Funktionale Eignung
+* Zuverlässigkeit
+* Wartbarkeit
+* Benutzerfreundlichkeit
+****
+
+== Relevante Stakeholder
+****
+Relevante Stackholder sind das Team Wechselspiel, der Kunde Yves Simmen und die Schule FHNW.
+****
+
+== Schnittstellen zu externen Systemen
+****
+Das System beinhaltet keine Schnittstellen zu externen Systemen.
+****

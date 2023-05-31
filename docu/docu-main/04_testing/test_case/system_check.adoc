@@ -1,0 +1,32 @@
+=== System Check durchführen
+
+[cols="6, 1"]
+|===
+2+|*Beschreibung*
+2+| In diesem Testfall wird geprüft, ob die System-Checks erfolgreich durchgeführt werden können.
+2+|*Vorbedingung*
+2+|Blackout Applikation ist auf dem Raspberry Pi gestartet. +
+Tastatur und Maus angeschlossen
+2+|*Testdaten*
+2+|Keine vonnöten
+|*Schritte*
+|*Resultat*
+| 1. Der erste Screen bietet eine Möglichkeit das System zu konfigurieren?
+| Ja
+| 2. Auf dem aktiven Screen in den Configurations-Screen wechseln.
+| -
+| 3. Button sollte innerhalb von 2. Sekunden reagieren.
+| Ja
+| 4. Das System wechselt in den Configurations-Screen.
+| Ja
+| 5. Das System zeigt einen Texteditor für das Ändern der Config an
+| Ja
+| 6. Das System zeigt eine Liste von verfügbaren Audiogeräten an.
+| Ja
+| 7. Das System zeigt einen Testmodus für das Audio an.
+| Ja
+| 8. Config werte anpassen und Blackout verlassen mit dem Exit knopf
+| -
+| 9. Blackout starten und prüfen ob die Config übernommen worden ist
+| Ja
+|===

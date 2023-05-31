@@ -1,0 +1,17 @@
+[[section-deployment-view]]
+== Verteilungssicht
+In der Verteilungssicht wird die technische Infrastruktur, auf der das System läuft, genauer betrachtet und die Softwarebausteine auf der Infrastruktur.
+
+=== Infrastruktur Ebene 1&2
+Hier wird die Verteilung des Gesamtsystems beleuchtet.
+
+.Deployment Diagram
+image:../00_diagrams/deployment_diagram.png[Deployment Diagram]
+
+Begründung::
+Das System Blackout läuft auf einen Raspberry Pi, dabei werden die .jar und die Config auf das System deployt. Das System holt, dann selbständig die Datenbank der Fragen. Das System interagiert über die GPIO Schnittstelle des Raspberry PIs mit den Buttons.
+
+Des Weiteren werden folgende Dinge noch mitgeliefert (Siehe Randbedingungen Kunde):
+
+* Dokumentation
+* Raspberry PI Image

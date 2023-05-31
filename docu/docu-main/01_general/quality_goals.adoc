@@ -1,0 +1,23 @@
+.Qualitätsziele
+[cols="1, 1"]
+|===
+|Qualitätsziel |Motivation und Beschreibung
+
+|Macht Spass und ist interaktiv (Benutzerfreundlichkeit)
+|Der Besuchende soll am Spiel Spass haben und vom Ausstellungsstück angezogen werden. Auch sollte es möglichst interaktiv
+sein und auf unterschiedliche Eingabearten setzen (nicht einfach nur ein Bildschirm, denn sonst könnte Blackout auch
+Zuhause gespielt werden)
+
+|Wissen prüfen (Funktionale Eignung)
+|Blackout soll dem Benutzer:innen aufzeigen, was er aus der Ausstellung mitgenommen hat und das Wissen gamifiziert abfragen.
+
+|Interaktion und Spiel funktioniert (Zuverlässigkeit)
+|Der Benutzer soll ein funktionierendes Spiel vor sich haben, das mehrmals ohne Probleme durchgespielt werden kann. Des
+Weiteren sollen die Interaktionsmöglichkeiten jederzeit verfügbar sein und so das Erlebnis nicht eingeschränkt werden.
+
+|Hält als Ausstellungsstück bestand (Wartbarkeit)
+|Blackout wird an einer Ausstellung präsentiert, es soll nicht die ersten paar Mal funktionieren, sondern muss dem
+Dauerbetrieb einer Ausstellung standhalten. Wenn doch etwas Defekt ist, soll es möglichst einfach ersetzt werden können.
+|===
+
+link:https://www.cs.technik.fhnw.ch/confluence20/display/VT122206/Kritische+Erfolgsfaktoren[Qualitätsziele]
