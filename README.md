@@ -1,8 +1,6 @@
 # ip12-22vt_blackout
 FHNW Computer Science Student Project Semester 1&2
 
-Doku's IN BEARBEITUNG!
-
 ## Spielbeschreibung
 
 In Blackout stellt Kulana (dt. Perspektive), die Energieexpertin der Primeo Energie AG, Fragen zu den einzelnen Exponaten. Ihr Feedback zeigt auf, wie es um das Prä- bzw. Postkonzept der spielenden Besucher:innen steht.
