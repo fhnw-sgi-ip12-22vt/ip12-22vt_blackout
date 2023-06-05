@@ -1,0 +1,110 @@
+# Bellsofts liberica openjdk 17.0.7 auf debian
+image: kasperliisback/maven-liberica-openjdk-debian:17.0.7-7
+
+# Stages welche ausgeführt werden
+stages:
+  - code_style_check
+  - unit_test
+  - code_quality_analysis
+  - build
+  - upload
+  - download
+  - release
+
+# SONAR_TOKEN soll vertraulich behandelt werden (Es ist wie ein Passwort)
+# Daher ist es eine protected variable, welche maskiert ist (Settings -> CI/CD Settings -> Variables "Ausklappen").
+# Das heisst man muss das Token nie direkt reinschreiben, sonder kann die variable verwenden, diese Variable wird beim build ersetzt.
+#  Weil sie auch maskiert ist, wir das Token nie im Log anzeigt, das trägt auch zur sicherheit bei.
+variables:
+  PACKAGE_VERSION: "${CI_COMMIT_TAG}"
+  JAR_NAME: BlackoutApplication-${PACKAGE_VERSION}
+  JAR: "${JAR_NAME}.jar"
+  SCRIPTS_FOLDER: scripts
+  SCRIPTS: "${SCRIPTS_FOLDER}.tar.gz"
+  PACKAGE_REGISTRY_URL: "${CI_API_V4_URL}/projects/${CI_PROJECT_ID}/packages/generic/blackout_release/${PACKAGE_VERSION}"
+  MAVEN_CLI_OPTS: >-
+    -Dsonar.login=$SONAR_TOKEN
+    -Dsonar.host.url=https://sonarcloud.io
+    -Dsonar.organization=blackout
+    -Dsonar.projectKey=blackout_blackoutapplication
+  MAVEN_CLI_OPTS_FEATURE_BRANCH: >-
+    -Dsonar.branch.name=$CI_COMMIT_BRANCH
+    -Dsonar.branch.target=main
+
+#Stage "code_style_check"
+code_style_check:
+  stage: code_style_check
+  rules:
+    - if: $CI_COMMIT_TAG == null
+  script:
+    - mvn checkstyle:check
+
+#Stage "unit_test"
+unit_test:
+  stage: unit_test
+  rules:
+    - if: $CI_COMMIT_TAG == null
+  script:
+    - mvn test
+
+#Stages "code_analysis"
+code_quality_analysis_on_feature_branch:
+  stage: code_quality_analysis
+  rules:
+    - if: $CI_COMMIT_BRANCH != "main" && $CI_COMMIT_TAG == null
+  script:
+    - 'mvn verify sonar:sonar $MAVEN_CLI_OPTS $MAVEN_CLI_OPTS_FEATURE_BRANCH'
+
+code_quality_analysis_on_main:
+  stage: code_quality_analysis
+  rules:
+    - if: $CI_COMMIT_BRANCH == "main" && $CI_COMMIT_TAG == null
+  script:
+    - 'mvn verify sonar:sonar $MAVEN_CLI_OPTS'
+
+#Stage "build"
+build:
+  stage: build
+  rules:
+    - if: $CI_COMMIT_TAG
+  script:
+    - mvn package -Djar-name=${JAR_NAME}
+    - pwd
+    - ls
+    - tar czf "target/${SCRIPTS}" "${SCRIPTS_FOLDER}"
+  artifacts:
+    paths:
+      - target/
+
+#Stage "upload artificats to package registry"
+upload:
+  stage: upload
+  image: curlimages/curl:latest
+  rules:
+    - if: $CI_COMMIT_TAG
+  script:
+    - |
+     curl --header "JOB-TOKEN: ${CI_JOB_TOKEN}" --upload-file target/${JAR} ${PACKAGE_REGISTRY_URL}/${JAR}
+     curl --header "JOB-TOKEN: ${CI_JOB_TOKEN}" --upload-file target/${SCRIPTS} ${PACKAGE_REGISTRY_URL}/${SCRIPTS}
+
+#Stage "download artifact from package registry"
+download:
+  stage: download
+  rules:
+    - if: $CI_COMMIT_TAG
+  script:
+    - |
+     wget --header="JOB-TOKEN: ${CI_JOB_TOKEN}" ${PACKAGE_REGISTRY_URL}/${JAR}
+     wget --header="JOB-TOKEN: ${CI_JOB_TOKEN}" ${PACKAGE_REGISTRY_URL}/${SCRIPTS}
+
+#Stage "create a release"
+release:
+  stage: release
+  image: registry.gitlab.com/gitlab-org/release-cli:latest
+  rules:
+    - if: $CI_COMMIT_TAG
+  script:
+    - |
+      release-cli create --name "Release $CI_COMMIT_TAG" --tag-name $CI_COMMIT_TAG \
+      --assets-link "{\"name\":\"${JAR}\",\"url\":\"${PACKAGE_REGISTRY_URL}/${JAR}\"}" \
+      --assets-link "{\"name\":\"${SCRIPTS}\",\"url\":\"${PACKAGE_REGISTRY_URL}/${SCRIPTS}\"}" \
