@@ -9,7 +9,7 @@
 include::../test_case/versus.adoc[Testbeschreibung]
 
 // TODO Status anpassen
-=== Status -> Test has ❌/✅
+=== Status -> Test has ✅
 
 Die Bestimmung des Bestanden / Nicht Bestanden-Status hängt davon ab, wie das erwartete Ergebnis und +
 das tatsächliche Ergebnis miteinander verglichen werden.

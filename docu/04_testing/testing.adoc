@@ -130,7 +130,7 @@ Die Testmandate sind die Durchläufe der Manuellen Tests, welche den Personen zu
 [%autowidth, options="header"]
 |===
 |Datum | Testrun | Result | Link
-|30.05.2023 | Philip und Andri |❌/✅ a|link:test_runs/system_check_run_31_Mai.adoc[Testrun]
+|30.05.2023 | Philip und Andri | ✅ a|link:test_runs/system_check_run_31_Mai.adoc[Testrun]
 |===
 
 include::test_runs/system_check_run_31_Mai.adoc[]
@@ -141,7 +141,7 @@ include::test_runs/system_check_run_31_Mai.adoc[]
 [%autowidth, options="header"]
 |===
 |Datum | Testrun | Result | Link
-|30.05.2023 | Philip und Andri |❌/✅ a|link:test_runs/versus_run_31_Mai.adoc[Testrun]
+|30.05.2023 | Philip und Andri | ✅ a|link:test_runs/versus_run_31_Mai.adoc[Testrun]
 |===
 
 include::test_runs/versus_run_31_Mai.adoc[]
@@ -152,7 +152,7 @@ include::test_runs/versus_run_31_Mai.adoc[]
 [%autowidth, options="header"]
 |===
 |Datum | Testrun | Result | Link
-|30.05.2023 | Philip und Andri |❌/✅ a|link:test_runs/einzel_run_31_Mai.adoc[Testrun]
+|30.05.2023 | Philip und Andri | ✅ a|link:test_runs/einzel_run_31_Mai.adoc[Testrun]
 |===
 
 include::test_runs/einzel_run_31_Mai.adoc[]

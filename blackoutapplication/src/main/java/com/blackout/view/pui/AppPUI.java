@@ -29,8 +29,8 @@ public class AppPUI extends PuiBase<AppModel, AppController> {
     @Override
     public void initializeParts() {
         btnZ = new LEDButton(pi4J, PIN.TXD, PIN.RXD);
-        btnX = new LEDButton(pi4J, PIN.D24, PIN.D23);
-        btnY = new LEDButton(pi4J, PIN.CEO, PIN.CE1);
+        btnY = new LEDButton(pi4J, PIN.D24, PIN.D23);
+        btnX = new LEDButton(pi4J, PIN.CEO, PIN.CE1);
         btnAckB = new LEDButton(pi4J, PIN.D20, PIN.D21);
 
         btnA = new LEDButton(pi4J, PIN.D27, PIN.D17);
