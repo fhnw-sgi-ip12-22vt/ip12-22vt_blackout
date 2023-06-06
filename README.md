@@ -18,6 +18,11 @@ Die Hardwarekomponenten sind im SAD unter [Hardwarebeschreibung](https://github.
 Die Betriebsanleitung ist in der Dokumentation unter [Betriebsanleitung](https://github.com/fhnw-sgi-ip12-22vt/ip12-22vt_blackout/blob/main/docu/Betriebsanleitung.pdf) dokumentiert.
 
 
+## Starten des Spiels
+Das System Blackout ist plug and play.
+Das Spiel startet automatisch beim Start des Raspberry PIs.
+Das Spiel kann auch über den Desktop Shortcut gestartet werden.
+Das Spiel kann nicht parametrisiert werden. Etwaige Konfigurationen können über den Config Screen im Spiel gemacht werden, sind jedoch im Normalbetrieb nicht von Nöten.
 
 
 
