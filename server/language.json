@@ -1,0 +1,92 @@
+{
+  "translations": {
+    "en": {
+      "texts": {
+        "start_blackout": "Start Blackout",
+        "choose_language": "Sprache / Langue / Lingua",
+        "up": "Up",
+        "down": "Down",
+        "random_or_feedback": "Want to answer random questions or questions about a specific showroom?",
+        "random_mode": "Random questions",
+        "feedback_mode": "Specific showroom",
+        "put_on_headphones": "Put on headphones now!",
+        "single": "Alone",
+        "versus": "In pairs",
+        "wait_until": "Wait until your counterpart has confirmed",
+        "question": "Question",
+        "of": "from",
+        "at_least": "Select at least one answer choice",
+        "score_3": ":)",
+        "score_2": ":|",
+        "score_1": ":(",
+        "unknown": "Unknown error"
+      }
+    },
+    "de": {
+      "texts": {
+        "start_blackout": "Blackout starten",
+        "choose_language": "Language / Langue / Lingua",
+        "up": "Nach oben",
+        "down": "Nach unten",
+        "random_or_feedback": "Möchtest du zufällige Fragen oder Fragen zu einem bestimmten Ausstellungsraum beantworten?",
+        "random_mode": "Zufällige Fragen",
+        "feedback_mode": "bestimmter Ausstellungsraum",
+        "put_on_headphones": "Jetzt Kopfhörer aufsetzen!",
+        "single": "Allein",
+        "versus": "Zu zweit",
+        "wait_until": "Warte, bis dein Gegenüber bestätigt hat",
+        "question": "Frage",
+        "of": "von",
+        "at_least": "Wähle mindestens eine Antwortmöglichkeit aus",
+        "score_3": ":)",
+        "score_2": ":|",
+        "score_1": ":("   ,
+        "unknown": "Unbekannter Fehler"
+      }
+    },
+    "fr": {
+      "texts": {
+        "start_blackout": "Début Blackout",
+        "choose_language": "Sprache / Language / Lingua",
+        "up": "En haut",
+        "down": "En bas",
+        "random_or_feedback": "Tu veux répondre à des questions aléatoires ou à des questions sur une salle d'exposition spécifique ?",
+        "random_mode": "Questions aléatoires",
+        "feedback_mode": "Salle d'exposition spécifique",
+        "put_on_headphones": "Mettre les écouteurs maintenant!",
+        "single": "Seul",
+        "versus": "A deux",
+        "wait_until": "Attends que ton interlocuteur confirme",
+        "question": "Question",
+        "of": "sur",
+        "at_least": "Choisis au moins une réponse possible",
+        "score_3": ":)",
+        "score_2": ":|",
+        "score_1": ":(",
+        "unknown": "Erreur inconnue"
+      }
+    },
+    "it": {
+      "texts": {
+        "start_blackout": "Inizio Blackout",
+        "choose_language": "Sprache / Language / Langue",
+        "up": "In alto",
+        "down": "Sotto",
+        "random_or_feedback": "Volete rispondere a domande casuali o a domande su uno specifico spazio espositivo?",
+        "random_mode": "Domande casuali",
+        "feedback_mode": "Spazio espositivo specifico",
+        "put_on_headphones": "Mettete subito le cuffie!",
+        "single": "Da solo",
+        "versus": "Per due",
+        "wait_until": "Aspettate che la vostra controparte confermi",
+        "question": "Domanda",
+        "of": "da",
+        "at_least": "Scegliere almeno un'opzione di risposta",
+        "score_3": ":)",
+        "score_2": ":|",
+        "score_1": ":(",
+        "unknown": "Errore sconosciuto"
+      }
+    }
+  }
+}
