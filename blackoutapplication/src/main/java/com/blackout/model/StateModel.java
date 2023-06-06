@@ -17,6 +17,7 @@ public class StateModel {
   public final ObservableValue<Boolean> alertVisible = new ObservableValue<>(false);
   public ObservableValue<String> audioOutputs = new ObservableValue<>("");
   public ObservableValue<String> configText = new ObservableValue<>("");
+  public ObservableValue<String> language = new ObservableValue<>("Deutsch");
   private Quiz quiz;
   private QuestionSet questionSet;
 

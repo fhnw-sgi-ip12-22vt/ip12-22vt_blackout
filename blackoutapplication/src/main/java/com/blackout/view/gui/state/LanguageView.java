@@ -191,93 +191,18 @@ public class LanguageView extends StateView {
     }
   }
 
-  public void nextLanguage(String consoleType) {
-    // Todo: remove ugly workaround
-    String configLanguageProperty;
-
-    if (isPlayerA) {
-      configLanguageProperty = "app.settings.language.A";
-    } else {
-      configLanguageProperty = "app.settings.language.B";
-    }
-
-    String selectedItem = languageList.getSelectionModel().getSelectedItem();
-    switch (selectedItem) {
-      case "Deutsch" -> {
-        ConfigManager.setProperty(configLanguageProperty, "en");
-        languageList.getSelectionModel().select("English");
-      }
-      case "English" -> {
-        ConfigManager.setProperty(configLanguageProperty, "fr");
-        languageList.getSelectionModel().select("Français");
-      }
-      case "Français" -> {
-        ConfigManager.setProperty(configLanguageProperty, "it");
-        languageList.getSelectionModel().select("Italiano");
-      }
-      case "Italiano" -> {
-        ConfigManager.setProperty(configLanguageProperty, "de");
-        languageList.getSelectionModel().select("Deutsch");
-      }
-      default -> {
-        ConfigManager.setProperty(configLanguageProperty, "de");
-        languageList.getSelectionModel().select("Deutsch");
-      }
-    }
-  }
-
-  public void previousLanguage(String consoleType) {
-    // Todo: remove ugly workaround
-    String configLanguageProperty;
-
-    if (isPlayerA) {
-      configLanguageProperty = "app.settings.language.A";
-    } else {
-      configLanguageProperty = "app.settings.language.B";
-    }
-
-    String selectedItem = languageList.getSelectionModel().getSelectedItem();
-    switch (selectedItem) {
-      case "Deutsch" -> {
-        ConfigManager.setProperty(configLanguageProperty, "it");
-        languageList.getSelectionModel().select("Italiano");
-      }
-      case "Italiano" -> {
-        ConfigManager.setProperty(configLanguageProperty, "fr");
-        languageList.getSelectionModel().select("Français");
-      }
-      case "Français" -> {
-        ConfigManager.setProperty(configLanguageProperty, "en");
-        languageList.getSelectionModel().select("English");
-      }
-      case "English" -> {
-        ConfigManager.setProperty(configLanguageProperty, "de");
-        languageList.getSelectionModel().select("Deutsch");
-      }
-      default -> {
-        ConfigManager.setProperty(configLanguageProperty, "de");
-        languageList.getSelectionModel().select("Deutsch");
-      }
-    }
-  }
-
   @Override
   public void setupUiToActionBindings(StateController controller) {
-    buttonPrimary.setOnAction(e -> {
-      previousLanguage(controller.getConsoleType().toString());
-      controller.actionPrimary();
-    });
+    buttonPrimary.setOnAction(e -> controller.actionPrimary());
     buttonSecondary.setOnAction(e -> controller.actionSecondary());
-    buttonTertiary.setOnAction(e -> {
-      nextLanguage(controller.getConsoleType().toString());
-      controller.actionTertiary();
-    });
+    buttonTertiary.setOnAction(e -> controller.actionTertiary());
     buttonAck.setOnAction(e -> controller.actionAck());
   }
 
   @Override
   public void setupModelToUiBindings(StateModel model) {
     super.setupModelToUiBindings(model);
+    onChangeOf(model.language).execute((oldValue, newValue) -> languageList.getSelectionModel().select(newValue));
     onChangeOf(model.option1Selected).update(option1SelectedView.visibleProperty());
     onChangeOf(model.option3Selected).update(option3SelectedView.visibleProperty());
 
