@@ -16,15 +16,19 @@ public class AudioOutput {
   private static final DataLine.Info DATA_LINE_INFO =
       new DataLine.Info(SourceDataLine.class, FORMAT);
   private final Object lock = new Object();
-  private final SourceDataLine headsetLine;
-  private final SourceDataLine speakerLine;
+  private final String headsetDevice;
+  private final int headsetDeviceIndex;
+  private final String speakerDevice;
+  private final int speakerDeviceIndex;
   private SourceDataLine currentLine;
 
   public AudioOutput(String headsetDevice, int headsetDeviceIndex,
                      String speakerDevice, int speakerDeviceIndex) {
-    headsetLine = getSourceDataLine(headsetDevice, headsetDeviceIndex);
-    speakerLine = getSourceDataLine(speakerDevice, speakerDeviceIndex);
-    setDevice(headsetLine);
+    this.headsetDevice = headsetDevice;
+    this.headsetDeviceIndex = headsetDeviceIndex;
+    this.speakerDevice = speakerDevice;
+    this.speakerDeviceIndex = speakerDeviceIndex;
+    setSpeakerActive();
   }
 
   private static SourceDataLine getSourceDataLine(String mixerDescription, int mixerIndex) {
@@ -104,11 +108,11 @@ public class AudioOutput {
   }
 
   public void setHeadsetActive() {
-    setDevice(headsetLine);
+    setDevice(getSourceDataLine(headsetDevice, headsetDeviceIndex));
   }
 
   public void setSpeakerActive() {
-    setDevice(speakerLine);
+    setDevice(getSourceDataLine(speakerDevice, speakerDeviceIndex));
   }
 
   public void stop() {
