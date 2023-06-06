@@ -3,6 +3,7 @@
 :revdate: Mai 2023
 :revremark: Stand Assessment 3
 :numbered: 1.0.0
+:toc:
 
 Disclaimer: Inhalt teils mit Antworten von ChatGPT (3.5, OpenAI) bearbeitet.
 

@@ -6,7 +6,12 @@
 :toc:
 
 = Hardware
-include::hardware_list.adoc[Hardwareliste]
+
+[%always]
+<<<
+[%notitle]
+== Hardwareliste
+image::Hardwareliste.pdf[pages=1..6]
 
 == Physischer Spielautomat
 
@@ -26,7 +31,11 @@ Das Plexiglas verhindert, dass das Display nicht entwendet werden können und di
 
 Nachfolgend sind die genauen Aufbaupläne des Baus:
 
-link:schema_spiel.pdf[Schema Spielautomat]
+[%always]
+<<<
+[%notitle]
+=== Schema Spiel
+image::schema_spiel.pdf[pages=1..16]
 
 == Schaltplan
 
