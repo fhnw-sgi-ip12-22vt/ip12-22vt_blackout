@@ -98,6 +98,10 @@ public class AppStarter extends Application {
   private void handleCloseRequest(WindowEvent event) {
     if (DialogHelper.confirmMessage(ConfigManager.getProperty("app.settings.title"),
         "Möchtest du Blackout wirklich beenden?")) {
+      SoundFx.soundStageA.stopAll();
+      SoundFx.soundStageA.close();
+      SoundFx.soundStageB.stopAll();
+      SoundFx.soundStageB.close();
       stageA.close();
       stageB.close();
     } else {
