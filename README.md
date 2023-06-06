@@ -11,7 +11,7 @@ Daraus berechenbare Statistiken werden der Primeo Energie AG über ein simples, 
 
 ## Hardwarekomponenten
 
-Die Hardwarekomponenten sind im SAD unter [Hardwarebeschreibung]([https://gitlab.fhnw.ch/ip12-22vt/ip12-22vt_wechselspiel/docu/-/blob/main/02_hardware/hardware.adoc](https://github.com/fhnw-sgi-ip12-22vt/ip12-22vt_blackout/tree/main/docu/02_hardware)  dokumentiert.
+Die Hardwarekomponenten sind im SAD unter [Hardwarebeschreibung]([https://gitlab.fhnw.ch/ip12-22vt/ip12-22vt_wechselspiel/docu/-/blob/main/02_hardware/hardware.adoc](https://github.com/fhnw-sgi-ip12-22vt/ip12-22vt_blackout/tree/main/docu/02_hardware))  dokumentiert.
 
 ## Betriebsanleitung
 
