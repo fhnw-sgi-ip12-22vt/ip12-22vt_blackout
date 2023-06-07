@@ -17,6 +17,9 @@ Die Hardwarekomponenten sind im SAD unter [Hardwarebeschreibung](https://github.
 
 Die Betriebsanleitung ist in der Dokumentation unter [Betriebsanleitung](https://github.com/fhnw-sgi-ip12-22vt/ip12-22vt_blackout/blob/main/docu/Betriebsanleitung.pdf) dokumentiert.
 
+## Bedienungsanleitung
+
+Die Bedienungsanleitung für Webinterface -server befindet sich hier: [Bedienungsanleitung](https://github.com/fhnw-sgi-ip12-22vt/ip12-22vt_blackout/blob/main/docu/Bedienungsanleitung.pdf)
 
 ## Starten des Spiels
 Das System Blackout ist plug and play.
