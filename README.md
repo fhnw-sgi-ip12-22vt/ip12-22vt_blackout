@@ -19,7 +19,7 @@ Die Betriebsanleitung ist in der Dokumentation unter [Betriebsanleitung](https:/
 
 ## Bedienungsanleitung
 
-Die Bedienungsanleitung für Webinterface -server befindet sich hier: [Bedienungsanleitung](https://github.com/fhnw-sgi-ip12-22vt/ip12-22vt_blackout/blob/main/docu/Bedienungsanleitung.pdf)
+Die Bedienungsanleitung für Web-Interface/-Server befindet sich hier: [Bedienungsanleitung](https://github.com/fhnw-sgi-ip12-22vt/ip12-22vt_blackout/blob/main/docu/Bedienungsanleitung.pdf)
 
 ## Starten des Spiels
 Das System Blackout ist plug and play.
