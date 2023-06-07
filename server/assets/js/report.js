@@ -120,18 +120,21 @@ fetch('questions.json')
             <h5 class='card-title' style='min-height: 72px;'>${questionString}</h5>`;
 
             answerStrings.forEach((answer, answerIndex) => {
+              console.log("answer" + answer)
+              console.log("answerIndex" + answerIndex)
+              console.log("solutionArray" + solutionArray)
+              console.log("answersArray" + answersArray)
                 let answerClass = 'card-text';
                 let answerStyle = 'min-height: 48px;padding: 10px;';
                 if (answersArray.includes(answerIndex)) {
-                    if (solutionArray.includes(answerIndex)) {
                         answerStyle += 'background-color: #FFD200 !important;'
+                    if (solutionArray.includes(answerIndex)) {
                         answerClass += ' border rounded-pill border-3 border-success';
                     } else {
                         answerClass += ' border rounded-pill border-3 border-danger';
                     }
                 } else {
                     if (solutionArray.includes(answerIndex)) {
-                        answerStyle += 'background-color: #FFD200 !important;'
                         answerClass += ' border rounded-pill border-3 border-success';
                     }
                 }
