@@ -651,13 +651,24 @@ app.get('/select-language', async (req, res) => {
 // GET get-random-question.html
 app.get('/get-random-question', async (req, res) => {
   let roomId = req.query.roomId;
+  let exponatId = req.query.exponatId;
 
   let questions = await database.get('questions');
   if (!questions) throw new Error();
 
-  let possibleQuestions = questions.filter(question => {
-    return question.roomId == roomId;
-  })
+  let possibleQuestions = questions;
+  
+  if (roomId) {
+    possibleQuestions = questions.filter(question => {
+      return question.roomId == roomId;
+    })
+  }
+
+  if (exponatId) {
+    possibleQuestions = questions.filter(question => {
+      return question.exponatId == exponatId;
+    })
+  }
 
   let randomQuestion = possibleQuestions[getRandomNumber(0, possibleQuestions.length - 1)];
 
