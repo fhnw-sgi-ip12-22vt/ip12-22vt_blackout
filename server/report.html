@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>BLACKOUT</title>
+    <link rel="icon" type="image/png" sizes="2974x2974" href="assets/img/logo.png">
+    <link rel="icon" type="image/png" sizes="2974x2974" href="assets/img/logo.png">
+    <link rel="icon" type="image/png" sizes="2974x2974" href="assets/img/logo.png">
+    <link rel="icon" type="image/png" sizes="2974x2974" href="assets/img/logo.png">
+    <link rel="icon" type="image/png" sizes="2974x2974" href="assets/img/logo.png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Annie+Use+Your+Telescope&amp;display=swap">
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-light navbar-expand py-3">
+        <div class="container"><a class="navbar-brand d-flex align-items-center" href="#"><img src="assets/img/logo.png" style="height: 65px;margin-right: 10px;"></a><button class="navbar-toggler" data-bs-toggle="collapse"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button></div>
+    </nav>
+    <div id="loader" style="position: absolute;background: white;height: 100vh;width: 100vw;z-index: 100;">
+        <h1 class="text-center"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-clock" style="color: black !important;margin-top: 30px;margin-bottom: 30px;">
+                <path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z"></path>
+                <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0z"></path>
+            </svg></h1>
+        <p style="text-align: center;">Auswertung wird geladen ...</p>
+        <p style="text-align: center;">Evaluation is loaded ...</p>
+        <p style="text-align: center;">Chargement de l'évaluation ...</p>
+        <p style="text-align: center;">La valutazione è caricata ...</p>
+    </div>
+    <div class="container-fluid">
+        <div class="row" style="min-height: 85vh;">
+            <div class="col-12 col-xl-6" style="background: url(&quot;assets/img/kulana.png&quot;) top / cover;min-height: 50vh;"><span></span></div>
+            <div class="col d-xxl-flex align-items-xxl-center" style="margin: 5%;">
+                <div>
+                    <h1 id="title">So steht es um dein <strong>Energiewissen</strong></h1><br/>
+<div class="battery-container">
+    <div class="battery">
+        <div class="battery-mask">
+            <div class="battery-text"></div>
+            <div class="battery-level"></div>
+        </div>
+    </div>
+</div>
+<br/>
+                    <p id="subtitle" style="text-align: justify;">Unten siehst du, wie gut du in den einzelnen Fragen abgeschnitten hast und in welchem Raum du mehr darüber erfahren kannst.</p>
+                    <h5 id="greeting">Bis bald wieder bei Primeo Energie AG!</h5>
+                    <h5 style="font-family: 'Annie Use Your Telescope', serif;font-size: 60px;transform: translate(10px) rotate(-2deg);">Kulana</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container py-4 py-xl-5">
+        <div class="row gy-4 row-cols-1 row-cols-md-2 row-cols-xl-3" id="report-content"></div>
+    </div>
+    <footer class="text-center">
+        <div class="container text-muted py-4 py-lg-5">
+            <ul class="list-inline">
+                <li class="list-inline-item me-4"><a class="link-secondary" href="https://www.primeo-energie.ch" target="_blank">Primeo Energie AG</a></li>
+                <li class="list-inline-item me-4"><a class="link-secondary" href="https://www.fhnw.ch" target="_blank">Fachhochschule Nordwestschweiz</a></li>
+            </ul>
+            <p class="mb-0">Copyright © 2023 Blackout Games</p>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="assets/js/report.js"></script>
+    <script src="assets/js/secure.js"></script>
+</body>
+
+</html>

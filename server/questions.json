@@ -1,0 +1,20 @@
+{
+  "questions": [
+    {
+      "questionId": 1,
+      "questionStringEN": "Question",
+      "questionStringDE": "Question",
+      "questionStringFR": "Question",
+      "questionStringIT": "Question",
+      "answerStringsEN": ["Answer", "Answer", "Answer"],
+      "answerStringsDE": ["Antwort", "Antwort", "Antwort"],
+      "answerStringsFR": ["Réponse", "Réponse", "Réponse"],
+      "answerStringsIT": ["Risposta", "Risposta", "Risposta"],
+      "solutionArray": [0],
+      "explanationStringEN": "Erklärung",
+      "explanationStringDE": "Erklärung",
+      "explanationStringFR": "Erklärung",
+      "explanationStringIT": "Erklärung"
+    }
+  ]
+}
