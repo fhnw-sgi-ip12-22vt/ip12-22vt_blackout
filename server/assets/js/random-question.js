@@ -43,6 +43,7 @@ answerString1.innerHTML = getQueryParameterValue('answerString1' + localStorage.
 answerString2.innerHTML = getQueryParameterValue('answerString2' + localStorage.languageCode.toUpperCase());
 answerString3.innerHTML = getQueryParameterValue('answerString3' + localStorage.languageCode.toUpperCase());
 explanationString.innerHTML = getQueryParameterValue('explanationString' + localStorage.languageCode.toUpperCase());
+explanationString.style.opacity = 0;
 exponatTitle.innerHTML = getQueryParameterValue('exponatTitle');
 exponatDescription.innerHTML = getQueryParameterValue('exponatDescription');
 roomTitle.innerHTML = getQueryParameterValue('roomTitle');
@@ -53,28 +54,39 @@ answerString2.style.cursor = "pointer";
 answerString3.style.cursor = "pointer";
 
 answerString1.onclick = () => {
-    answerString1.style.backgroundColor = '#ffd200';
+  answerString1.style.backgroundColor = '#ffd200'
+}
+answerString2.onclick = () => {
+  answerString2.style.backgroundColor = '#ffd200'
+}
+answerString3.onclick = () => {
+  answerString3.style.backgroundColor = '#ffd200'
+}
+
+function checkResult() {
     if (getQueryParameterValue('answer1') == 'true') {
         answerString1.classList.add('border-success');
     } else {
         answerString1.classList.add('border-danger');
     }
-}
-
-answerString2.onclick = () => {
-    answerString2.style.backgroundColor = '#ffd200';
+  
     if (getQueryParameterValue('answer2') == 'true') {
         answerString2.classList.add('border-success');
     } else {
         answerString2.classList.add('border-danger');
     }
-}
 
-answerString3.onclick = () => {
-    answerString3.style.backgroundColor = '#ffd200';
     if (getQueryParameterValue('answer2') == 'true') {
         answerString3.classList.add('border-success');
     } else {
         answerString3.classList.add('border-danger');
     }
+}
+
+function newQuestion() {
+  if (getQueryParameterValue('type') == 'room') {
+    window.location.href = '/get-random-question?roomId=' + getQueryParameterValue('roomId');
+  } else {
+    window.location.href = '/get-random-question?exponatId=' + getQueryParameterValue('exponatId');
+  }
 }

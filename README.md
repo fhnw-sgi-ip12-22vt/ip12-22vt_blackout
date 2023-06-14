@@ -27,5 +27,3 @@ Das Spiel startet automatisch beim Start des Raspberry PIs.
 Das Spiel kann auch über den Desktop Shortcut gestartet werden.
 Das Spiel kann nicht parametrisiert werden. Etwaige Konfigurationen können über den Config Screen im Spiel gemacht werden, sind jedoch im Normalbetrieb nicht von Nöten.
 
-
-

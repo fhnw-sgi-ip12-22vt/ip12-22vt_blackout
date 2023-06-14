@@ -23,9 +23,9 @@ const {
   deactivateRoom,
   deleteRoom,
   getRandomNumber
-} = require('./functions');
-const language = require('./language.json');
-const { exportDatabase, importDatabase } = require('./export');
+} = require('../../../Downloads/blackout/functions');
+const language = require('../../../Downloads/blackout/language.json');
+const { exportDatabase, importDatabase } = require('../../../Downloads/blackout/export');
 
 // init repl.it db
 const Database = require("@replit/database");
@@ -568,7 +568,7 @@ app.get('/activate-room', async (req, res) => {
 
 // GET language.json
 app.get('/language.json', async (req, res) => {
-  let language = require('./language.json');
+  let language = require('../../../Downloads/blackout/language.json');
   res.json(language);
 });
 
@@ -676,6 +676,9 @@ app.get('/get-random-question', async (req, res) => {
     + await getQueryStringFromQuestion(randomQuestion.questionId)
     + await getQueryStringFromExponat(randomQuestion.exponatId)
     + await getQueryStringFromRoom(randomQuestion.roomId);
+
+  if (roomId) url += "&type=room";
+  if (exponatId) url += "&type=exponat";
 
   res.redirect(url);
 })
